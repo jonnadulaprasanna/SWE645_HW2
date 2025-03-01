@@ -1,0 +1,260 @@
+/* Prasanna Jonnadula - G01482709 */
+/* This Styles.css contain different font size, colors and backgrounds for different elements */
+/* Global Styles */
+body, h1, h2, h3, h4, h5 {
+    font-family: "Raleway", sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+    color: white;
+    padding: 128px 16px;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3em;
+    margin-bottom: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.5em;
+    margin-bottom: 32px;
+    opacity: 0.9;
+}
+
+/* Content Section */
+.content-section {
+    background-color: #f5f5f5;
+    padding: 64px 16px;
+}
+
+.section-title {
+    color: #1a237e;
+    border-bottom: 3px solid #1a237e;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+}
+
+/* Feature Cards */
+.feature-card {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h4 {
+    color: #1a237e;
+    margin-bottom: 16px;
+}
+
+/* Lists */
+.w3-ul li {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.w3-ul li:last-child {
+    border-bottom: none;
+}
+
+/* Buttons */
+.action-button {
+    background-color: #1a237e;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #0d47a1;
+}
+
+/* Navigation */
+.nav-sidebar {
+    background-color: #1a237e !important;
+    color: white !important;
+}
+
+.nav-sidebar a {
+    color: white !important;
+}
+
+.nav-sidebar a:hover {
+    background-color: #0d47a1 !important;
+}
+
+/* Images */
+.course-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+/* Image Gallery */
+.image-card {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(26, 35, 126, 0.8);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Form Styles */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.required:after {
+    content: " *";
+    color: #ff4444;
+}
+
+.w3-input, .w3-select, .w3-textarea {
+    background-color: #ffffff !important;
+    border: 1px solid #87CEEB !important;
+    border-radius: 5px !important;
+    margin-bottom: 15px !important;
+    padding: 8px !important;
+}
+
+.w3-input:focus, .w3-select:focus, .w3-textarea:focus {
+    border-color: #0066cc !important;
+    box-shadow: 0 0 5px rgba(0,102,204,0.3) !important;
+}
+
+.checkbox-group, .radio-group {
+    background-color: rgba(135, 206, 235, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #87CEEB;
+}
+
+/* Survey Form Specific */
+.survey-body {
+    background-color: #87CEEB;
+    color: #333;
+    font-family: "Raleway", sans-serif;
+}
+
+.survey-label {
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.section-title {
+    color: #0066cc;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.w3-input, .w3-select {
+    margin-bottom: 15px;
+}
+
+.submit-btn {
+    background-color: #0066cc !important;
+    color: white !important;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0052a3 !important;
+}
+
+.cancel-btn {
+    background-color: #dc3545 !important;
+    color: white !important;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background-color: #bb2d3b !important;
+}
+
+small {
+    color: #666;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+/* Error Page Specific */
+.error-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#countdown {
+    font-size: 2em;
+    color: #2196F3;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 2em;
+    }
+    .hero-subtitle {
+        font-size: 1.2em;
+    }
+}

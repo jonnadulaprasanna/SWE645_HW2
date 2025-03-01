@@ -1,0 +1,191 @@
+<!--Prasanna Jonnadula - G01482709-->
+<!--This survey.html is form submission which contains different input fields and we will deploy this in EC2 instance --><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Survey Form - SWE 645</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #87CEEB;
+        }
+        .survey-body {
+            background-color: #87CEEB;
+        }
+        .w3-bar {
+            background-color: #87CEEB !important;
+        }
+        .w3-button {
+            background-color: #87CEEB !important;
+        }
+        .submit-btn {
+            background-color: #4CAF50 !important;
+        }
+        .cancel-btn {
+            background-color: #f44336 !important;
+        }
+        .survey-label {
+            color: #000;
+        }
+    </style>
+</head>
+<body class="survey-body">
+
+<!-- Top navigation -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-padding w3-card">
+        <a href="index.html" class="w3-bar-item w3-button">← Back to Home</a>
+    </div>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px;margin-top:100px;margin-bottom:80px">
+    <div class="form-container">
+        <h2 class="w3-center section-title">Student Survey Form</h2>
+        <form id="surveyForm" class="w3-container" onsubmit="return validateForm()">
+            <!-- Personal Information -->
+            <div class="w3-section">
+                <h3 class="section-title">Personal Information</h3>
+                <div class="w3-row-padding">
+                    <div class="w3-half">
+                        <label class="required survey-label">First Name</label>
+                        <input class="w3-input" type="text" name="firstName" required>
+                    </div>
+                    <div class="w3-half">
+                        <label class="required survey-label">Last Name</label>
+                        <input class="w3-input" type="text" name="lastName" required>
+                    </div>
+                </div>
+
+                <label class="required survey-label">Street Address</label>
+                <input class="w3-input" type="text" name="address" required>
+                
+                <div class="w3-row-padding">
+                    <div class="w3-third">
+                        <label class="required survey-label">City</label>
+                        <input class="w3-input" type="text" name="city" required>
+                    </div>
+                    <div class="w3-third">
+                        <label class="required survey-label">State</label>
+                        <input class="w3-input" type="text" name="state" required>
+                    </div>
+                    <div class="w3-third">
+                        <label class="required survey-label">ZIP</label>
+                        <input class="w3-input" type="text" name="zip" required pattern="[0-9]{5}" title="Please enter a valid 5-digit ZIP code">
+                    </div>
+                </div>
+                
+                <div class="w3-row-padding">
+                    <div class="w3-half">
+                        <label class="required survey-label">Phone</label>
+                        <input class="w3-input" type="tel" name="phone" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
+                    </div>
+                    <div class="w3-half">
+                        <label class="required survey-label">Email</label>
+                        <input class="w3-input" type="email" name="email" required>
+                    </div>
+                </div>
+
+                <label class="required survey-label">Date of Survey</label>
+                <input class="w3-input" type="date" name="surveyDate" required>
+            </div>
+
+            <!-- Campus Features -->
+            <div class="w3-section">
+                <h3 class="section-title">Campus Features</h3>
+                <p class="survey-label">What did you like most about the campus? (Check all that apply)</p>
+                <div class="checkbox-group">
+                    <div class="w3-row-padding">
+                        <div class="w3-half">
+                            <label><input class="w3-check" type="checkbox" name="likes" value="students"> Students</label><br>
+                            <label><input class="w3-check" type="checkbox" name="likes" value="location"> Location</label><br>
+                            <label><input class="w3-check" type="checkbox" name="likes" value="campus"> Campus</label>
+                        </div>
+                        <div class="w3-half">
+                            <label><input class="w3-check" type="checkbox" name="likes" value="atmosphere"> Atmosphere</label><br>
+                            <label><input class="w3-check" type="checkbox" name="likes" value="dormRooms"> Dorm Rooms</label><br>
+                            <label><input class="w3-check" type="checkbox" name="likes" value="sports"> Sports</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interest Source -->
+            <div class="w3-section">
+                <h3 class="section-title">Source of Interest</h3>
+                <p class="required survey-label">How did you become interested in the university?</p>
+                <div class="radio-group">
+                    <label><input class="w3-radio" type="radio" name="interest" value="friends" required> Friends</label><br>
+                    <label><input class="w3-radio" type="radio" name="interest" value="television"> Television</label><br>
+                    <label><input class="w3-radio" type="radio" name="interest" value="internet"> Internet</label><br>
+                    <label><input class="w3-radio" type="radio" name="interest" value="other"> Other</label>
+                </div>
+            </div>
+
+            <!-- Recommendation -->
+            <div class="w3-section">
+                <h3 class="section-title">Recommendation</h3>
+                <label class="required survey-label">How likely are you to recommend this school to other prospective students?</label>
+                <select class="w3-select" name="likelihood" required>
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="veryLikely">Very Likely</option>
+                    <option value="likely">Likely</option>
+                    <option value="unlikely">Unlikely</option>
+                </select>
+            </div>
+
+            <!-- Raffle -->
+            <div class="w3-section">
+                <h3 class="section-title">Raffle Entry</h3>
+                <label class="required survey-label">Enter at least 10 comma-separated numbers (1-100):</label>
+                <input class="w3-input" type="text" name="raffle" id="raffle" required>
+                <small class="survey-label">Example: 1,2,3,4,5,6,7,8,9,10</small>
+            </div>
+
+            <!-- Comments -->
+            <div class="w3-section">
+                <h3 class="section-title">Additional Comments</h3>
+                <textarea class="w3-input w3-border" name="comments" rows="4" placeholder="Share your thoughts with us..."></textarea>
+            </div>
+
+            <!-- Buttons -->
+            <button class="w3-button w3-round submit-btn" type="submit">Submit Survey</button>
+
+            <a href="index.html">
+                <button class="w3-button w3-round cancel-btn" type="button">Cancel</button>
+              </a>
+        </form>
+    </div>
+</div>
+
+<script>
+function validateForm() {
+    // Validate raffle numbers
+    const raffleInput = document.getElementById('raffle').value;
+    const numbers = raffleInput.split(',').map(num => parseInt(num.trim()));
+    
+    // Check if there are at least 10 numbers
+    if (numbers.length < 10) {
+        alert('Please enter at least 10 numbers for the raffle');
+        return false;
+    }
+
+    // Check if all numbers are between 1 and 100
+    const validNumbers = numbers.every(num => num >= 1 && num <= 100);
+    if (!validNumbers) {
+        alert('All raffle numbers must be between 1 and 100');
+        return false;
+    }
+
+    // If validation passes, show success message and redirect
+    alert('Survey submitted successfully! Redirecting to homepage...');
+    window.location.href = 'http://myawswebs3.s3-website.us-east-2.amazonaws.com';
+    return false;
+}
+</script>
+
+</body>
+</html>

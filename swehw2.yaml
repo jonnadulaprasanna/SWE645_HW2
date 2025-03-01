@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Config
+clusters:
+- name: "swehw2"
+  cluster:
+    server: "https://18.209.25.4/k8s/clusters/c-m-jqfx6dxn"
+    certificate-authority-data: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJ2VENDQ\
+      VdPZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQkdNUnd3R2dZRFZRUUtFeE5rZVc1aGJXbGoKY\
+      kdsemRHVnVaWEl0YjNKbk1TWXdKQVlEVlFRRERCMWtlVzVoYldsamJHbHpkR1Z1WlhJdFkyRkFNV\
+      GMwTURjNQpNakEyTmpBZUZ3MHlOVEF6TURFd01USXhNRFphRncwek5UQXlNamN3TVRJeE1EWmFNR\
+      Vl4SERBYUJnTlZCQW9UCkUyUjVibUZ0YVdOc2FYTjBaVzVsY2kxdmNtY3hKakFrQmdOVkJBTU1IV\
+      1I1Ym1GdGFXTnNhWE4wWlc1bGNpMWoKWVVBeE56UXdOemt5TURZMk1Ga3dFd1lIS29aSXpqMENBU\
+      VlJS29aSXpqMERBUWNEUWdBRWJJQUZXa0Q3Y3oyLwp4VnBuVkQ3ZVBPZ3NZMm83QWU1ZDk0MU1rY\
+      nJkMTVVQ3VkMGNmcURWdGJ5SlNDSmhnWUpabGV0aFN0cWRtSlNVCjdpdzA1eVFENDZOQ01FQXdEZ\
+      1lEVlIwUEFRSC9CQVFEQWdLa01BOEdBMVVkRXdFQi93UUZNQU1CQWY4d0hRWUQKVlIwT0JCWUVGQ\
+      jE3U3FQdzVEL1JOUWlsVThqSDErNjgwTHpGTUFvR0NDcUdTTTQ5QkFNQ0EwZ0FNRVVDSVFDOQp5T\
+      jIvZDJtN3NMSnZKOWZwcVVsbG82RGpraTNaTTlXZ010ZzBqL0Z5aWdJZ1grbk9pUno5NnRlU3RKT\
+      lNKckhJCkJBM0NVOTZYajBxU0IwR1F6ak1kRHJ3PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0t"
+
+users:
+- name: "swehw2"
+  user:
+    token: "kubeconfig-user-4wt4f66m88:swn79phkpw77lqk4lmhxbk7gp2vx7x27dsgzgp74nqlnj62h2zmjnj"
+
+
+contexts:
+- name: "swehw2"
+  context:
+    user: "swehw2"
+    cluster: "swehw2"
+
+current-context: "swehw2"
