@@ -14,13 +14,13 @@ pipeline {
 
         stage('Login to Docker Hub') {
             steps {
-                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'  // Login to DockerHub using credentials
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
             }
         }
 
         stage('Push Image to Docker Hub') {
             steps {
-                sh 'docker push prasanna0307/studentsurvey:latest'  // Push the built Docker image
+                sh 'docker push prasanna0307/studentsurvey:latest'
             }
         }
 
