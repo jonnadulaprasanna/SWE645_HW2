@@ -177,18 +177,18 @@ body, h1, h2, h3, h4, h5 {
 /* Survey Form Specific */
 .survey-body {
     background-color: #FFB6C1;
-    color: #333;
+    color: #FFB6C1;
     font-family: "Raleway", sans-serif;
 }
 
 .survey-label {
-    color: #333;
+    color: #FFB6C1;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
 .form-container {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: #FFB6C1;
     border-radius: 15px;
     padding: 30px;
     margin: 20px auto;
