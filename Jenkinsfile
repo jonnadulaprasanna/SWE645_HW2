@@ -1,14 +1,14 @@
 pipeline {
     agent any
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('dockerhub') // Using DockerHub credentials stored in Jenkins
+        DOCKERHUB_CREDENTIALS = credentials('dockerhub') 
     }
     stages {
         stage('Build') {
             steps {
-                sh 'rm -rf *.war'  // Assuming you meant to clean up old WAR files
-                sh 'jar cvf studentsurvey.war .'  // Create the WAR file
-                sh 'docker build -t prasanna0307/studentsurvey:latest .'  // Build Docker image
+                sh 'rm -rf *.war'  
+                sh 'jar cvf studentsurvey.war .'  
+                sh 'docker build -t prasanna0307/studentsurvey:latest .'  
             }
         }
 
@@ -26,7 +26,7 @@ pipeline {
 
         stage('Deploy to Kubernetes') {
             steps {
-                // Update the deployment image and monitor the rollout
+               
                 sh 'kubectl set image deployment/deployswehw2 container-0=prasanna0307/studentsurvey:latest -n default'
                 sh 'kubectl rollout status deployment/deployswehw2 -n default'
             }
@@ -35,7 +35,7 @@ pipeline {
 
     post {
         always {
-            sh 'docker logout'  // Always logout from DockerHub after the pipeline
+            sh 'docker logout'  
         }
     }
 }
