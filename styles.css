@@ -182,7 +182,7 @@ body, h1, h2, h3, h4, h5 {
 }
 
 .survey-label {
-    color: #333;
+    color: #000;
     font-weight: 500;
     margin-bottom: 5px;
 }
@@ -219,7 +219,7 @@ body, h1, h2, h3, h4, h5 {
 }
 
 .cancel-btn {
-    background-color: #dc3545 !important;
+    background-color: #FFC0CB !important;
     color: white !important;
     transition: background-color 0.3s ease;
 }
